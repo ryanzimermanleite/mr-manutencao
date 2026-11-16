@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,500&family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/style.css?v=1">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
   <script>document.documentElement.classList.add("js");</script>
 
   <script type="application/ld+json">
@@ -32,7 +32,6 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "MR Manutenção Industrial e Comercial",
-    "legalName": "Machado & Rodrigues Manutenção Industrial e Comercial",
     "slogan": "Comprometimento que gera confiança. Qualidade que entrega resultados.",
     "description": "Adequação de máquinas NR-12, manutenção industrial preventiva e corretiva, instalações eletromecânicas, tubulações, climatização, estruturas metálicas e terceirização de mão de obra especializada.",
     "foundingDate": "2019",
@@ -113,7 +112,7 @@
     <!-- ===================== INÍCIO ===================== -->
     <section class="hero" id="inicio">
       <div class="hero-bg" aria-hidden="true">
-        <img src="assets/img/hero.webp" alt="" width="844" height="912" fetchpriority="high">
+        <img data-parallax="0.3" src="assets/img/hero.webp" alt="" width="844" height="912" fetchpriority="high">
       </div>
       <div class="hero-hex" aria-hidden="true"></div>
       <div class="container hero-inner">
@@ -231,6 +230,30 @@
       </div>
     </section>
 
+    <!-- ===================== RECONHECIMENTO GM (logo depois das marcas) ===================== -->
+    <section class="rec-faixa" id="reconhecimento" aria-labelledby="rec-titulo">
+      <div class="rec-luz" aria-hidden="true"></div>
+      <div class="container reconhecimento">
+        <div class="rec-texto reveal" data-anim="esq">
+          <p class="eyebrow eyebrow-light">Reconhecimento profissional</p>
+          <h2 id="rec-titulo">Reconhecidos pela General Motors.</h2>
+          <p class="rec-planta">Planta de São Caetano do Sul/SP</p>
+          <p>O reconhecimento recebido pela MR e por John Eder Rodrigues na planta da GM em São Caetano do Sul é um marco na nossa trajetória e reforça a importância da qualidade, da confiança e do compromisso com os resultados.</p>
+          <p class="rec-selo"><span class="rec-medalha"><svg aria-hidden="true"><use href="#i-medalha"/></svg></span><span>Comprometimento, qualidade e compromisso reconhecidos por uma das maiores montadoras do mundo.</span></p>
+        </div>
+        <div class="rec-certificados" data-stagger>
+          <button type="button" class="certificado tilt" data-galeria="reconhecimento" data-inicio="0" aria-label="Ampliar o certificado concedido à MR">
+            <img src="assets/img/reconhecimento/certificado-mr.webp" alt="Certificado de reconhecimento da General Motors concedido à MR" width="1200" height="877" loading="lazy">
+            <span>Certificado concedido à MR</span>
+          </button>
+          <button type="button" class="certificado tilt" data-galeria="reconhecimento" data-inicio="1" aria-label="Ampliar o certificado concedido a John Eder Rodrigues">
+            <img src="assets/img/reconhecimento/certificado-john.webp" alt="Certificado de reconhecimento da General Motors concedido a John Eder Rodrigues" width="1200" height="884" loading="lazy">
+            <span>Certificado concedido a John Eder Rodrigues</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== MANIFESTO ===================== -->
     <section class="manifesto" aria-label="Nosso compromisso">
       <div class="container">
@@ -238,21 +261,33 @@
       </div>
     </section>
 
+    <!-- ===================== FAIXA DE SERVIÇOS (letreiro em movimento) ===================== -->
+    <div class="letreiro" aria-hidden="true">
+      <div class="letreiro-linha">
+        <div class="letreiro-trilho"><span>Manutenção industrial</span><span>Adequação NR-12</span><span>Dispositivos de segurança</span><span>Montagem de equipamentos</span><span>Elétrica e automação</span><span>Atendimento 24h</span></div>
+        <div class="letreiro-trilho"><span>Manutenção industrial</span><span>Adequação NR-12</span><span>Dispositivos de segurança</span><span>Montagem de equipamentos</span><span>Elétrica e automação</span><span>Atendimento 24h</span></div>
+      </div>
+      <div class="letreiro-linha letreiro-inversa">
+        <div class="letreiro-trilho"><span>Tubulações e solda TIG</span><span>Climatização industrial</span><span>Estruturas metálicas</span><span>Transportadores</span><span>Mão de obra especializada</span><span>Construção e reformas</span></div>
+        <div class="letreiro-trilho"><span>Tubulações e solda TIG</span><span>Climatização industrial</span><span>Estruturas metálicas</span><span>Transportadores</span><span>Mão de obra especializada</span><span>Construção e reformas</span></div>
+      </div>
+    </div>
+
     <!-- ===================== QUEM SOMOS ===================== -->
     <section class="section" id="sobre">
       <div class="container split">
-        <div class="split-media reveal">
-          <img src="assets/img/sobre.webp" alt="Dois técnicos da MR, de capacete e uniforme, avaliando tubulações dentro de uma indústria" width="887" height="1280" loading="lazy">
+        <div class="split-media reveal" data-anim="esq">
+          <img class="revela" src="assets/img/sobre.webp" alt="Dois técnicos da MR, de capacete e uniforme, avaliando tubulações dentro de uma indústria" width="887" height="1280" loading="lazy">
           <div class="badge-anos" aria-hidden="true"><small>Desde</small><strong>2019</strong></div>
-          <img class="hex-flutuante" src="assets/img/hex/hex-painel.webp" alt="" width="640" height="554" loading="lazy" aria-hidden="true">
+          <img class="hex-flutuante" data-parallax="-0.12" src="assets/img/hex/hex-painel.webp" alt="" width="640" height="554" loading="lazy" aria-hidden="true">
         </div>
-        <div class="split-text reveal">
+        <div class="split-text reveal" data-anim="dir">
           <p class="eyebrow">Quem somos</p>
           <h2>Experiência de chão de fábrica, compromisso de parceiro.</h2>
-          <p>A <strong>Machado &amp; Rodrigues Manutenção Industrial e Comercial</strong> executa adequações NR-12, manutenção industrial e terceirização de mão de obra especializada para indústrias de diferentes segmentos.</p>
+          <p>A <strong>MR Manutenção Industrial e Comercial</strong> executa adequações NR-12, manutenção industrial e terceirização de mão de obra especializada para indústrias de diferentes segmentos.</p>
           <p>Acompanhamos as atualizações das normas e as inovações da área para atender empresas de pequeno e grande porte com soluções inteligentes e econômicas, planejadas para que a sua produção siga funcionando.</p>
 
-          <ul class="pilares">
+          <ul class="pilares" data-stagger>
             <li><svg aria-hidden="true"><use href="#i-escudo"/></svg><strong>Segurança</strong><span>Normas em dia, EPIs adequados e respeito às regras de cada cliente.</span></li>
             <li><svg aria-hidden="true"><use href="#i-medalha"/></svg><strong>Qualidade</strong><span>Mão de obra especializada e experiente em cada execução.</span></li>
             <li><svg aria-hidden="true"><use href="#i-aperto"/></svg><strong>Transparência</strong><span>Diálogo direto para construir uma relação de confiança.</span></li>
@@ -265,10 +300,10 @@
     <!-- ===================== SEGMENTOS ===================== -->
     <section class="segmentos" id="segmentos" aria-labelledby="segmentos-titulo">
       <div class="container segmentos-inner">
-        <div class="segmentos-texto reveal">
+        <div class="segmentos-texto reveal" data-anim="esq">
           <p class="eyebrow eyebrow-light">Mercados</p>
           <h2 id="segmentos-titulo">Atuamos em diferentes segmentos da indústria.</h2>
-          <ul class="segmentos-lista">
+          <ul class="segmentos-lista" data-stagger>
             <li><span class="seg-ico"><svg aria-hidden="true"><use href="#i-fabrica"/></svg></span>Metalúrgicas</li>
             <li><span class="seg-ico"><svg aria-hidden="true"><use href="#i-carro"/></svg></span>Indústria automobilística</li>
             <li><span class="seg-ico"><svg aria-hidden="true"><use href="#i-frasco"/></svg></span>Indústrias químicas</li>
@@ -276,10 +311,10 @@
             <li><span class="seg-ico"><svg aria-hidden="true"><use href="#i-capsula"/></svg></span>Indústrias farmacêuticas</li>
           </ul>
         </div>
-        <div class="segmentos-hex reveal" aria-hidden="true">
+        <div class="segmentos-hex reveal" data-anim="zoom" aria-hidden="true">
           <span class="hex hex-solido hex-a"></span>
-          <img class="hex hex-b" src="assets/img/hex/hex-tubulacao.webp" alt="" width="640" height="554" loading="lazy">
-          <img class="hex hex-c" src="assets/img/hex/hex-protecao.webp" alt="" width="640" height="554" loading="lazy">
+          <img class="hex hex-b" data-parallax="0.1" src="assets/img/hex/hex-tubulacao.webp" alt="" width="640" height="554" loading="lazy">
+          <img class="hex hex-c" data-parallax="-0.1" src="assets/img/hex/hex-protecao.webp" alt="" width="640" height="554" loading="lazy">
           <span class="hex hex-contorno hex-d"></span>
         </div>
       </div>
@@ -506,22 +541,22 @@
           <h2>Manutenção planejada é resultado no caixa. <span class="tom">Cada parada fora de hora custa produção, prazo e dinheiro.</span></h2>
         </header>
 
-        <div class="economia">
-          <div class="eco-card reveal">
-            <strong><span>12</span>–18%</strong>
+        <div class="economia" data-stagger>
+          <div class="eco-card tilt">
+            <strong><span data-count="12">12</span>–<span data-count="18">18</span>%</strong>
             <p>de economia nos custos de manutenção ao trocar o modelo corretivo pelo preventivo</p>
           </div>
-          <div class="eco-card eco-destaque reveal">
-            <strong><span>8</span>–12%</strong>
+          <div class="eco-card eco-destaque tilt">
+            <strong><span data-count="8">8</span>–<span data-count="12">12</span>%</strong>
             <p>de economia adicional quando a manutenção preditiva complementa a preventiva</p>
           </div>
-          <div class="eco-card reveal">
-            <strong><span>15</span>–40%</strong>
+          <div class="eco-card tilt">
+            <strong><span data-count="15">15</span>–<span data-count="40">40</span>%</strong>
             <p>é a fatia que a manutenção pode representar nos custos totais de produção</p>
           </div>
         </div>
 
-        <ol class="estrategias reveal" aria-label="Estratégias de manutenção">
+        <ol class="estrategias" data-stagger aria-label="Estratégias de manutenção">
           <li>
             <span class="est-ico"><svg aria-hidden="true"><use href="#i-chave"/></svg></span>
             <h3>Corretiva</h3>
@@ -539,7 +574,7 @@
           </li>
         </ol>
 
-        <form class="simulador reveal" id="simulador" aria-labelledby="sim-titulo" onsubmit="return false">
+        <form class="simulador reveal" data-anim="zoom" id="simulador" aria-labelledby="sim-titulo" onsubmit="return false">
           <div class="sim-entrada">
             <h3 id="sim-titulo">Simule a economia na sua operação</h3>
             <label for="sim-gasto">Quanto a sua empresa gasta por ano com manutenção?</label>
@@ -568,12 +603,12 @@
     <!-- ===================== MÃO DE OBRA ===================== -->
     <section class="section" id="mao-de-obra">
       <div class="container mdo">
-        <div class="mdo-texto reveal">
+        <div class="mdo-texto reveal" data-anim="esq">
           <p class="eyebrow">Terceirização de mão de obra</p>
           <h2>Mão de obra técnica qualificada, quando e onde você precisar.</h2>
           <p class="mdo-lead">Profissionais capacitados para empresas que buscam eficiência operacional, redução de custos e suporte técnico qualificado, em regime de administração.</p>
 
-          <ul class="perfis">
+          <ul class="perfis" data-stagger>
             <li>
               <span class="perfil-ico"><svg aria-hidden="true"><use href="#i-chave"/></svg></span>
               <div><strong>Mecânicos especializados</strong><span>Sistemas hidráulicos e pneumáticos; manutenção corretiva e preventiva de equipamentos industriais.</span></div>
@@ -588,18 +623,18 @@
             </li>
           </ul>
 
-          <ul class="beneficios">
+          <ul class="beneficios" data-stagger>
             <li><svg aria-hidden="true"><use href="#i-raio"/></svg><div><strong>Agilidade</strong><span>Equipes mobilizadas rapidamente</span></div></li>
             <li><svg aria-hidden="true"><use href="#i-capacete"/></svg><div><strong>Segurança</strong><span>Profissionais treinados e equipados</span></div></li>
             <li><svg aria-hidden="true"><use href="#i-balanca"/></svg><div><strong>Custo sob controle</strong><span>Regime de administração flexível</span></div></li>
           </ul>
         </div>
 
-        <div class="mdo-media reveal">
+        <div class="mdo-media reveal" data-anim="dir">
           <div class="mdo-fotos">
-            <img src="assets/img/equipe/01.webp" alt="Técnicos da MR com cinto de segurança trabalhando em altura sobre plataforma" width="427" height="640" loading="lazy">
-            <img src="assets/img/equipe/02.webp" alt="Dois profissionais da MR em plataforma elevatória dentro da fábrica" width="427" height="640" loading="lazy">
-            <img src="assets/img/equipe/03.webp" alt="Técnico da MR operando talha para movimentar equipamento" width="427" height="640" loading="lazy">
+            <img class="revela" src="assets/img/equipe/01.webp" alt="Técnicos da MR com cinto de segurança trabalhando em altura sobre plataforma" width="427" height="640" loading="lazy">
+            <img class="revela" src="assets/img/equipe/02.webp" alt="Dois profissionais da MR em plataforma elevatória dentro da fábrica" width="427" height="640" loading="lazy">
+            <img class="revela" src="assets/img/equipe/03.webp" alt="Técnico da MR operando talha para movimentar equipamento" width="427" height="640" loading="lazy">
           </div>
           <div class="mdo-callout">
             <strong>Instalação sem parar a produção</strong>
@@ -627,8 +662,8 @@
 
         <div class="projetos" id="lista-trabalhos">
           <article class="projeto reveal" data-cat="seguranca">
-            <button class="projeto-capa" type="button" data-galeria="nr12" aria-label="Ver fotos: adequação NR-12 em linha de produção">
-              <img src="assets/img/trabalhos/nr12/capa.webp" alt="Linha de produção com grades de proteção amarelas" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="nr12" aria-label="Ver fotos: adequação NR-12 em linha de produção">
+              <img class="revela" src="assets/img/trabalhos/nr12/capa.webp" alt="Linha de produção com grades de proteção amarelas" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">4 fotos</span>
             </button>
             <div class="projeto-info">
@@ -639,8 +674,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="montagem">
-            <button class="projeto-capa" type="button" data-galeria="transportadores" aria-label="Ver fotos: montagem e manutenção de transportadores">
-              <img src="assets/img/trabalhos/transportadores/capa.webp" alt="Esteira transportadora curva em área de produção" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="transportadores" aria-label="Ver fotos: montagem e manutenção de transportadores">
+              <img class="revela" src="assets/img/trabalhos/transportadores/capa.webp" alt="Esteira transportadora curva em área de produção" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">2 fotos</span>
             </button>
             <div class="projeto-info">
@@ -651,8 +686,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="instalacoes">
-            <button class="projeto-capa" type="button" data-galeria="eletrica" aria-label="Ver fotos: infraestrutura elétrica e quadros de comando">
-              <img src="assets/img/trabalhos/eletrica/capa.webp" alt="Equipe com capacetes e coletes diante de painéis elétricos" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="eletrica" aria-label="Ver fotos: infraestrutura elétrica e quadros de comando">
+              <img class="revela" src="assets/img/trabalhos/eletrica/capa.webp" alt="Equipe com capacetes e coletes diante de painéis elétricos" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">2 fotos</span>
             </button>
             <div class="projeto-info">
@@ -663,8 +698,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="montagem">
-            <button class="projeto-capa" type="button" data-galeria="manutencao" aria-label="Ver fotos: manutenção em linhas de produção">
-              <img src="assets/img/trabalhos/manutencao/capa.webp" alt="Técnico da MR fazendo manutenção em equipamento da linha" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="manutencao" aria-label="Ver fotos: manutenção em linhas de produção">
+              <img class="revela" src="assets/img/trabalhos/manutencao/capa.webp" alt="Técnico da MR fazendo manutenção em equipamento da linha" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">3 fotos</span>
             </button>
             <div class="projeto-info">
@@ -675,8 +710,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="instalacoes">
-            <button class="projeto-capa" type="button" data-galeria="tubulacoes" aria-label="Ver fotos: tubulações de processo e soldagem TIG">
-              <img src="assets/img/trabalhos/tubulacoes/capa.webp" alt="Tubulações de processo em aço inox com válvulas e instrumentos" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="tubulacoes" aria-label="Ver fotos: tubulações de processo e soldagem TIG">
+              <img class="revela" src="assets/img/trabalhos/tubulacoes/capa.webp" alt="Tubulações de processo em aço inox com válvulas e instrumentos" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">2 fotos</span>
             </button>
             <div class="projeto-info">
@@ -687,8 +722,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="mao-de-obra">
-            <button class="projeto-capa" type="button" data-galeria="mao-de-obra" aria-label="Ver fotos: mão de obra especializada em campo">
-              <img src="assets/img/trabalhos/mao-de-obra/capa.webp" alt="Técnicos da MR equipados para trabalho em altura" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="mao-de-obra" aria-label="Ver fotos: mão de obra especializada em campo">
+              <img class="revela" src="assets/img/trabalhos/mao-de-obra/capa.webp" alt="Técnicos da MR equipados para trabalho em altura" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">3 fotos</span>
             </button>
             <div class="projeto-info">
@@ -699,8 +734,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="instalacoes">
-            <button class="projeto-capa" type="button" data-galeria="climatizacao" aria-label="Ver fotos: climatização industrial">
-              <img src="assets/img/trabalhos/climatizacao/capa.webp" alt="Dutos e climatizadores industriais" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="climatizacao" aria-label="Ver fotos: climatização industrial">
+              <img class="revela" src="assets/img/trabalhos/climatizacao/capa.webp" alt="Dutos e climatizadores industriais" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">2 fotos</span>
             </button>
             <div class="projeto-info">
@@ -711,8 +746,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="montagem">
-            <button class="projeto-capa" type="button" data-galeria="montagem" aria-label="Ver fotos: montagem de equipamentos">
-              <img src="assets/img/trabalhos/montagem/capa.webp" alt="Equipamento industrial enclausurado montado na linha" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="montagem" aria-label="Ver fotos: montagem de equipamentos">
+              <img class="revela" src="assets/img/trabalhos/montagem/capa.webp" alt="Equipamento industrial enclausurado montado na linha" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">2 fotos</span>
             </button>
             <div class="projeto-info">
@@ -723,8 +758,8 @@
           </article>
 
           <article class="projeto reveal" data-cat="seguranca">
-            <button class="projeto-capa" type="button" data-galeria="estruturas" aria-label="Ver foto: plataformas, escadas e guarda-corpos">
-              <img src="assets/img/trabalhos/estruturas/capa.webp" alt="Escada metálica com guarda-corpo amarelo" width="800" height="600" loading="lazy">
+            <button class="projeto-capa tilt" type="button" data-galeria="estruturas" aria-label="Ver foto: plataformas, escadas e guarda-corpos">
+              <img class="revela" src="assets/img/trabalhos/estruturas/capa.webp" alt="Escada metálica com guarda-corpo amarelo" width="800" height="600" loading="lazy">
               <span class="projeto-fotos">1 foto</span>
             </button>
             <div class="projeto-info">
@@ -744,40 +779,26 @@
       </div>
     </section>
 
-    <!-- ===================== RECONHECIMENTO ===================== -->
-    <section class="section section-soft" id="reconhecimento">
+    <!-- ===================== VALORES ===================== -->
+    <section class="section section-soft" id="valores">
       <div class="container">
-        <div class="reconhecimento">
-          <div class="rec-texto reveal">
-            <p class="eyebrow">Reconhecimento profissional</p>
-            <h2>General Motors, planta de São Caetano do Sul/SP.</h2>
-            <p>O reconhecimento recebido pela MR e por John Eder Rodrigues na planta da GM em São Caetano do Sul é um marco na nossa trajetória e reforça a importância da qualidade, da confiança e do compromisso com os resultados.</p>
-            <p class="rec-selo"><svg aria-hidden="true"><use href="#i-medalha"/></svg><span>Comprometimento, qualidade e compromisso reconhecidos por uma das maiores montadoras do mundo.</span></p>
-          </div>
-          <div class="rec-certificados reveal">
-            <button type="button" class="certificado" data-galeria="reconhecimento" data-inicio="0" aria-label="Ampliar o certificado concedido à MR">
-              <img src="assets/img/reconhecimento/certificado-mr.webp" alt="Certificado de reconhecimento da General Motors concedido à MR" width="1200" height="877" loading="lazy">
-              <span>Certificado concedido à MR</span>
-            </button>
-            <button type="button" class="certificado" data-galeria="reconhecimento" data-inicio="1" aria-label="Ampliar o certificado concedido a John Eder Rodrigues">
-              <img src="assets/img/reconhecimento/certificado-john.webp" alt="Certificado de reconhecimento da General Motors concedido a John Eder Rodrigues" width="1200" height="884" loading="lazy">
-              <span>Certificado concedido a John Eder Rodrigues</span>
-            </button>
-          </div>
-        </div>
+        <header class="section-head reveal">
+          <p class="eyebrow">Nossos valores na prática</p>
+          <h2>O que a GM reconheceu, <span class="tom">entregamos todos os dias.</span></h2>
+        </header>
 
-        <ul class="valores">
-          <li class="reveal">
+        <ul class="valores" data-stagger>
+          <li class="tilt">
             <span class="valor-ico"><svg aria-hidden="true"><use href="#i-aperto"/></svg></span>
             <h3>Comprometimento</h3>
             <p>Dedicação, responsabilidade e foco nos resultados, a marca da nossa trajetória.</p>
           </li>
-          <li class="reveal">
+          <li class="tilt">
             <span class="valor-ico"><svg aria-hidden="true"><use href="#i-medalha"/></svg></span>
             <h3>Qualidade</h3>
             <p>Excelência na execução, eficiência operacional e atenção aos detalhes.</p>
           </li>
-          <li class="reveal">
+          <li class="tilt">
             <span class="valor-ico"><svg aria-hidden="true"><use href="#i-prancheta"/></svg></span>
             <h3>Compromisso</h3>
             <p>Respeito aos clientes, cumprimento dos requisitos e melhoria contínua dos serviços.</p>
@@ -793,7 +814,7 @@
 
     <!-- ===================== CHAMADA ===================== -->
     <section class="faixa" aria-labelledby="faixa-titulo">
-      <img class="faixa-bg" src="assets/img/faixa-contato.webp" alt="" width="778" height="583" loading="lazy">
+      <img class="faixa-bg" data-parallax="0.18" src="assets/img/faixa-contato.webp" alt="" width="778" height="583" loading="lazy">
       <div class="container faixa-inner reveal">
         <p class="faixa-24h"><svg aria-hidden="true"><use href="#i-relogio"/></svg>Atendimento 24 horas</p>
         <h2 id="faixa-titulo">A linha parou? A MR vai até você.</h2>
@@ -805,11 +826,11 @@
     <!-- ===================== CONTATO ===================== -->
     <section class="section" id="contato">
       <div class="container contato">
-        <div class="contato-info reveal">
+        <div class="contato-info reveal" data-anim="esq">
           <p class="eyebrow">Vamos conversar</p>
           <h2>Fale com a MR. <span class="tom">Envie os detalhes e retornamos com os próximos passos.</span></h2>
 
-          <ul class="contato-lista">
+          <ul class="contato-lista" data-stagger>
             <li>
               <svg aria-hidden="true"><use href="#i-whats"/></svg>
               <div><strong>WhatsApp</strong><a href="https://wa.me/5519987219972" target="_blank" rel="noopener">(19) 98721-9972</a></div>
@@ -829,7 +850,7 @@
           </ul>
         </div>
 
-        <form class="contato-form reveal" id="form-contato" novalidate>
+        <form class="contato-form reveal" data-anim="dir" id="form-contato" novalidate>
           <h3>Solicite um orçamento</h3>
           <div class="campo">
             <label for="f-nome">Nome</label>
@@ -897,7 +918,7 @@
       </div>
     </div>
     <div class="container footer-legal">
-      <p>© <span id="ano">2026</span> MR Manutenção Industrial e Comercial · Machado &amp; Rodrigues</p>
+      <p>© <span id="ano">2026</span> MR Manutenção Industrial e Comercial</p>
       <p>Hortolândia/SP</p>
     </div>
   </footer>
@@ -934,7 +955,7 @@
   </div>
 
   <script src="assets/js/galerias.js?v=1" defer></script>
-  <script src="assets/js/main.js?v=1" defer></script>
+  <script src="assets/js/main.js?v=2" defer></script>
   <!-- three.js (biblioteca 3D) + máquina interativa da tela inicial -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="assets/js/hero3d.js?v=8" defer></script>

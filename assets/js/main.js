@@ -42,7 +42,11 @@
   }
 
   /* ---------- animação de entrada ---------- */
-  var revelar = $$(".reveal");
+  // listas em cascata: cada item recebe a sua vez (--i)
+  $$("[data-stagger]").forEach(function (lista) {
+    Array.prototype.forEach.call(lista.children, function (filho, i) { filho.style.setProperty("--i", i); });
+  });
+  var revelar = $$(".reveal, [data-stagger]");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -280,6 +284,76 @@
     };
     gasto.addEventListener("input", atualizar);
     atualizar();
+  }
+
+  /* ---------- título da tela inicial: cada palavra sobe na sua vez ---------- */
+  var titulo = $(".hero h1");
+  if (titulo) {
+    var nPalavra = 0;
+    var quebrar = function (no) {
+      Array.prototype.slice.call(no.childNodes).forEach(function (filho) {
+        if (filho.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          filho.textContent.split(/(\s+)/).forEach(function (parte) {
+            if (!parte) return;
+            if (/^\s+$/.test(parte)) { frag.appendChild(document.createTextNode(" ")); return; }
+            var fora = document.createElement("span");
+            fora.className = "palavra";
+            var dentro = document.createElement("span");
+            dentro.textContent = parte;
+            dentro.style.setProperty("--i", nPalavra++);
+            fora.appendChild(dentro);
+            frag.appendChild(fora);
+          });
+          no.replaceChild(frag, filho);
+        } else if (filho.nodeType === 1 && filho.tagName !== "BR") {
+          quebrar(filho);
+        }
+      });
+    };
+    titulo.setAttribute("aria-label", titulo.textContent.replace(/\s+/g, " ").trim());
+    quebrar(titulo);
+  }
+
+  /* ---------- rolagem: barra de leitura e camadas que andam em velocidades diferentes ---------- */
+  var camadas = $$("[data-parallax]");
+  var celular = window.matchMedia && window.matchMedia("(max-width: 680px)").matches;
+  var pedido = false;
+  var aoRolar = function () {
+    pedido = false;
+    var alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
+    header.style.setProperty("--prog", alturaTotal > 0 ? Math.min(1, window.scrollY / alturaTotal) : 0);
+    var vh = window.innerHeight;
+    camadas.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) return;
+      var fator = Number(el.dataset.parallax) * (celular ? 0.5 : 1);
+      var deslocamento = (r.top + r.height / 2 - vh / 2) * -fator;
+      el.style.translate = "0 " + deslocamento.toFixed(1) + "px";
+    });
+  };
+  window.addEventListener("scroll", function () {
+    if (!pedido) { pedido = true; requestAnimationFrame(aoRolar); }
+  }, { passive: true });
+  window.addEventListener("resize", aoRolar);
+  aoRolar();
+
+  /* ---------- cartões que inclinam acompanhando o mouse (só em computador) ---------- */
+  if (window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    $$(".tilt").forEach(function (el) {
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        el.classList.add("is-tilting");
+        el.style.setProperty("--ry", (x * 10).toFixed(2) + "deg");
+        el.style.setProperty("--rx", (-y * 8).toFixed(2) + "deg");
+      });
+      el.addEventListener("pointerleave", function () {
+        el.classList.remove("is-tilting");
+        el.style.setProperty("--ry", "0deg");
+        el.style.setProperty("--rx", "0deg");
+      });
+    });
   }
 
   /* ---------- ano no rodapé ---------- */
