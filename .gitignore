@@ -1,0 +1,6 @@
+# Arquivos de trabalho: nao fazem parte do site publicado
+Thumbs.db
+desktop.ini
+.DS_Store
+__pycache__/
+.claude/
