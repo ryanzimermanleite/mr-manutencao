@@ -134,7 +134,7 @@
     }
     var M = {
       disco: std(0x05124a, { roughness: 0.85 }),
-      anel: std(0xee8933, { emissive: 0xb85a12, emissiveIntensity: 0.75 }),
+      anel: std(0xc3cad3, { metalness: 0.6, roughness: 0.3, emissive: 0x5d6673, emissiveIntensity: 0.55 }),
       corpo: std(0xe9edf3, { roughness: 0.45, metalness: 0.15 }),
       azul: std(0x07359a, { roughness: 0.45, metalness: 0.2 }),
       inox: std(0xc3ccd8, { metalness: 0.75, roughness: 0.3 }),
